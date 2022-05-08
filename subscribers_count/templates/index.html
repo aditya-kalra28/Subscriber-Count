@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -13,8 +15,12 @@
 </head>
 
 <body>
-  <nav class="row" style="background: grey; color: white;">
-    <div align="center"><h1 class="col-md-3 text-center">YouTube Channel Details</h1></div>
+  <nav class="row" style="background: #FF0000; color: white;">
+    
+    <div align="center">
+      <img src="{% static 'youtube.png' %}" alt="" width="3%" style="display: inline-block; padding-bottom: 17px;"> 
+      <h1 class="text-center" style="display: inline-block;">YouTube Channel Details</h1>
+    </div>
   </nav>
   <br />
   <br />
@@ -47,6 +53,8 @@
         {% endif %}
     </div>
    {% endif %} 
+
+   
 </body>
 
 </html>

@@ -8,7 +8,7 @@ def index(request):
     if request.method=='POST':
         channel=request.POST['channel']
         try:
-            req = req = urllib.request.urlopen('https://www.googleapis.com/youtube/v3/channels?forUsername='+channel+'&key=AIzaSyBAiqtwaDhw4zWWrvp85MNPUch1JwHzZac&part=statistics')
+            req = urllib.request.urlopen('https://www.googleapis.com/youtube/v3/channels?forUsername='+channel+'&key=AIzaSyBAiqtwaDhw4zWWrvp85MNPUch1JwHzZac&part=statistics')
             details=req.read()
             details_dict=json.loads(details)
             print(details_dict)
@@ -24,8 +24,8 @@ def index(request):
                 'error':True
             }
     else:
-        city=''
-        data={'city':city, 'error':False}
+        channel=''
+        data={'channel':channel, 'error':False}
     return render(request,'index.html',data)
     # OR we can pass (request,'index.hmtl',{'city':city,'data':data})
 
